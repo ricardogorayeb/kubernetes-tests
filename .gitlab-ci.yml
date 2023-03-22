@@ -1,5 +1,7 @@
 docker-build-php-fpm: # Name of the Job
   # Official docker image.
+  tags:
+    - dev
   image: docker:latest
   stage: build # Define the stage as build
   # Activates docker-in-docker service, which makes Docker able to run within a Docker environment
