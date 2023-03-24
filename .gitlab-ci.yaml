@@ -1,6 +1,6 @@
 deploy:
   image:
-    name: nginx:latest
+    name: nginx
     entrypoint: ['']
   script:
     - kubectl config get-contexts
