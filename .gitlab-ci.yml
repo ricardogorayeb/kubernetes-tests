@@ -4,5 +4,5 @@ deploy:
     entrypoint: ['']
   script:
     - kubectl config get-contexts
-    - kubectl config use-context kubernetes-admin@kubernetes
+    - kubectl config use-context teste/teste:dev
     - kubectl get pods
