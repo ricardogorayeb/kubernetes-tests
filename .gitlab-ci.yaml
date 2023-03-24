@@ -1,6 +1,6 @@
 deploy:
   image:
-    name: bitnami/kubectl:latest
+    name: nginx:latest
     entrypoint: ['']
   script:
     - kubectl config get-contexts
