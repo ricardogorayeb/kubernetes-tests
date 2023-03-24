@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    field.cattle.io/targetWorkloadIds: '["mamad-namespace/nginx-deployment"]'
+    management.cattle.io/ui-managed: "true"
+  name: nginx-deployment
+  namespace: mamad-namespace
+spec:
+  ports:
+  - name: nginx-http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+## selector that match the apps deployment on rancher cluster
+  selector:
+    workload.user.cattle.io/workloadselector: apps.deployment-mamad-namespace-nginx-deployment
+##
+  sessionAffinity: None
+  type: ClusterIP
