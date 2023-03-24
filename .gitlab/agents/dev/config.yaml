@@ -3,7 +3,6 @@ gitops:
     - id: "teste/teste"
       paths:
       - glob: "manifests/*.yaml"
-      - glob: "manifests/*.yaml"
 ci_access:
   projects:
     - id: teste/teste
