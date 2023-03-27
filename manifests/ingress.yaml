@@ -10,6 +10,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: nginx
+              name: my-nginx-svc
               port: 
                 number: 443
