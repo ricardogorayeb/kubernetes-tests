@@ -7,4 +7,5 @@ deploy:
     - kubectl config use-context teste/teste:dev
     - kubectl get pods --all-namespaces
     - kubectl apply -f manifests/nginx.yaml
-    - kubectl get pods --all-namespaces
+    - kubectl apply -f manifests/ingress.yaml
+    
