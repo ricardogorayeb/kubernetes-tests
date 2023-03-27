@@ -10,7 +10,8 @@ spec:
     - nginxtest.mn.sipam.gov.br
     secretName: haproxy-default-cert 
   rules:
-  - http:
+  - host: nginxtest.mn.sipam.gov.br
+    http:
       paths:
         - path: /
           pathType: Prefix
