@@ -33,7 +33,9 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: gitlab.mn.sipam.gov.br:5050/teste/registry/nginx
         ports:
         - containerPort: 80
           protocol: TCP
+      imagePullSecrets:
+      - name: gitlab-pull-secret
