@@ -1,12 +1,12 @@
 deploy:
   image:
     name: bitnami/kubectl:latest
-    entrypoint: ['']
+    entrypoint: ['git lfs install']
   script:
     - kubectl config get-contexts
     - kubectl config use-context teste/teste:dev
     - kubectl get pods --all-namespaces
-    - kubectl create secret docker-registry gitlab-pull-secret --docker-server=https://gitlab.mn.sipam.gov.br:5050 --docker-username=gitlab --docker-password=4saZMFyA62v23tr72NFo
+    - kubectl --namespace default create secret docker-registry gitlab-pull-secret --docker-server=https://gitlab.mn.sipam.gov.br:5050 --docker-username=gitlab --docker-password=4saZMFyA62v23tr72NFo
     - kubectl apply -f manifests/nginx.yaml
     - kubectl apply -f manifests/ingress.yaml
     
