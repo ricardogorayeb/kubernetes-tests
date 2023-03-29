@@ -1,15 +1,7 @@
 deploy:
   image:
-    name: alpine-latest
+    name: gitlab.mn.sipam.gov.br:5050/teste/registry/kubectl:v1
     entrypoint: ['']
-  before_script:
-    - git lfs install
-    - echo $HOME
-    - echo $KUBECONFIG
-    - echo $KUBE_URL
-    - mkdir -p $HOME/.kube
-    - echo -n $KUBECONFIG > $HOME/.kube/config
-    - kubectl get pods -A
   script:
     - kubectl config use-context teste/teste:dev
     - kubectl get pods --all-namespaces
