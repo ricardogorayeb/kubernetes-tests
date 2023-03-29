@@ -6,7 +6,7 @@ deploy:
     - kubectl config get-contexts
     - kubectl config use-context teste/teste:dev
     - kubectl get pods --all-namespaces
-    - kubectl --namespace default create secret docker-registry gitlab-pull-secret --docker-server=https://gitlab.mn.sipam.gov.br:5050 --docker-username=gitlab --docker-password=4saZMFyA62v23tr72NFo
+    - kubectl get secret gitlab-pull-secret || kubectl --namespace default create secret docker-registry gitlab-pull-secret --docker-server=https://gitlab.mn.sipam.gov.br:5050 --docker-username=gitlab --docker-password=4saZMFyA62v23tr72NFo
     - kubectl apply -f manifests/nginx.yaml
     - kubectl apply -f manifests/ingress.yaml
     
