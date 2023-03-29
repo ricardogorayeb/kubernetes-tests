@@ -8,7 +8,7 @@ spec:
   tls:
   - hosts:
     - nginxtest.mn.sipam.gov.br
-    secretName: haproxy-default-cert 
+    secretName: nginx-ingress-nginx-ingress-default-server-tls 
   rules:
   - host: nginxtest.mn.sipam.gov.br
     http:

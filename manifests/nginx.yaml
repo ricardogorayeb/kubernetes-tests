@@ -37,5 +37,12 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
+        volumeMounts:
+          - name: nginx-index-file
+            mountPath: /usr/share/nginx/html/
+      volumes:
+      - name: nginx-index-file
+        configMap:
+          name: nginx-configmap  
       imagePullSecrets:
       - name: gitlab-pull-secret
