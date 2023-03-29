@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gitlab.mn.sipam.gov.br:5050/teste/registry/nginx
+        image: gitlab.mn.sipam.gov.br:5050/teste/registry/nginx:v1
         ports:
         - containerPort: 80
           protocol: TCP
