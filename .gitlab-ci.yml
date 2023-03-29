@@ -1,6 +1,6 @@
 deploy:
   image:
-    name: bitnami/kubectl:latest
+    name: gitlab/gitlab-runner:alpine-latest
     entrypoint: ['git lfs install']
   script:
     - kubectl config get-contexts
