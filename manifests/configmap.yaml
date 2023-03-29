@@ -9,25 +9,25 @@ data:
     <h1> TESTE TESTE TESTE </h1>
     </html>
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: nginx-conf
-  namespace: default
-data:
-  nginx.conf: |
-    user nginx;
-    worker_processes  1;
-    events {
-      worker_connections  10240;
-    }
-    http {
-      server {
-          listen       443;
-          server_name  localhost;
-          location / {
-            root   html;
-            index  index.html index.htm;
-        }
-      }
-    }
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: nginx-conf
+#   namespace: default
+# data:
+#   nginx.conf: |
+#     user nginx;
+#     worker_processes  1;
+#     events {
+#       worker_connections  10240;
+#     }
+#     http {
+#       server {
+#           listen       80;
+#           server_name  nginxtest.mn.sipam.gov.br;
+#           location / {
+#             root   html;
+#             index  index.html index.htm;
+#         }
+#       }
+#     }

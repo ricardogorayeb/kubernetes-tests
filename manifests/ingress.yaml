@@ -1,14 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-ingress
+  name: nginx-ingress
+  namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    kubernetes.io/ingress.class: nginx
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
     - nginxtest.mn.sipam.gov.br
-    secretName: nginx-ingress-nginx-ingress-default-server-tls 
   rules:
   - host: nginxtest.mn.sipam.gov.br
     http:

@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-nginx-svc
+  namespace: default
   labels:
     app: nginx
 spec:
@@ -9,6 +10,7 @@ spec:
   ports:
   - protocol: TCP
     port: 80
+    targetPort: 80
   selector:
     app: nginx
   externalIPs:
@@ -40,14 +42,14 @@ spec:
         volumeMounts:
           - name: nginx-index-file
             mountPath: /usr/share/nginx/html/
-          - name: nginx-conf
-            mountPath: /etc/nginx/nginx.conf
+          # - name: nginx-conf-file
+          #   mountPath: /etc/nginx/nginx.conf
       volumes:
       - name: nginx-index-file
         configMap:
           name: nginx-index
-      - name: nginx-conf
-        configMap:
-          name: nginx-conf
+      # - name: nginx-conf-file
+      #   configMap:
+      #     name: nginx-conf
       imagePullSecrets:
       - name: gitlab-pull-secret
