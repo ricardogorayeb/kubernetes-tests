@@ -1,7 +1,7 @@
 deploy:
-  #image:
-  #  name: alpine-latest
-  #  entrypoint: ['']
+  image:
+    name: alpine-latest
+    entrypoint: ['']
   before_script:
     - git lfs install
     - echo $HOME
