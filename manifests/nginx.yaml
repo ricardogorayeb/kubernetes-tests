@@ -40,9 +40,14 @@ spec:
         volumeMounts:
           - name: nginx-index-file
             mountPath: /usr/share/nginx/html/
+          - name: nginx-conf
+            mountPath: /etc/nginx/nginx.conf
       volumes:
       - name: nginx-index-file
         configMap:
-          name: nginx-configmap  
+          name: nginx-index
+      - name: nginx-conf
+        configMap:
+          name: nginx-conf
       imagePullSecrets:
       - name: gitlab-pull-secret
