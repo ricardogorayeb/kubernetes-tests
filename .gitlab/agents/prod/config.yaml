@@ -1,5 +1,7 @@
 
 gitops:
+  tag:
+    - prod
   manifest_projects:
     - id: "teste/teste"
       paths:
