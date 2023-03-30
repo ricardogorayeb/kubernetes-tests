@@ -1,8 +1,6 @@
 
 gitops:
-  tag:
-    - prod
-  manifest_projects:
+ manifest_projects:
     - id: "teste/teste"
       paths:
       - glob: "manifests/*.yaml"
