@@ -1,1 +1,9 @@
 
+gitops:
+  manifest_projects:
+    - id: "teste/teste"
+      paths:
+      - glob: "manifests/*.yaml"
+ci_access:
+  projects:
+    - id: teste/teste
