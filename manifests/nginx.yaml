@@ -16,6 +16,7 @@ spec:
   externalIPs:
     - 172.20.5.101
     - 172.20.5.102
+    - 172.20.5.104
 ---
 apiVersion: apps/v1
 kind: Deployment
