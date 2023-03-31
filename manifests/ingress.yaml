@@ -6,7 +6,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
-  ingressClassName: nginx
   tls:
   - hosts:
     - nginxtest.mn.sipam.gov.br
