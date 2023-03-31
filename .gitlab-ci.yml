@@ -1,6 +1,5 @@
 stages:
-  - deploy-dev
-  - deploy-prod
+   - deploy-dev
 
 deploy-dev:
   tags:
@@ -17,5 +16,4 @@ deploy-dev:
     - kubectl apply -f manifests/configmap.yaml
     - kubectl apply -f manifests/ingress.yaml
   only:
-    - dev
-    
+    - main   
