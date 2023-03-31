@@ -1,5 +1,6 @@
 stages:
   - deploy-dev
+  - deploy-prod
 
 deploy-dev:
   tags:
