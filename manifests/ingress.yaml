@@ -10,7 +10,7 @@ spec:
   - hosts:
     - nginxtestdev.mn.sipam.gov.br
   rules:
-  - host: nginxtest.mn.sipam.gov.br
+  - host: nginxtestdev.mn.sipam.gov.br
     http:
       paths:
         - path: /
