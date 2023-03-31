@@ -6,7 +6,7 @@ metadata:
 data:
   index.html: |
     <html>
-    <h1> TESTE TESTE TESTE </h1>
+    <h1> TESTE TESTE TESTE - dev cluster </h1>
     </html>
 ---
 # apiVersion: v1
