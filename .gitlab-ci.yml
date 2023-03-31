@@ -1,6 +1,10 @@
-deploy:
+stages:
+  - deploy-dev
+
+deploy-dev:
   tags:
     - dev
+  stage: deploy-dev
   image:
     name: gitlab.mn.sipam.gov.br:5050/teste/registry/kubectl:v1
     entrypoint: ['']
