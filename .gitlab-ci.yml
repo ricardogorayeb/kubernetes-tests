@@ -1,7 +1,6 @@
 stages:
   - deploy-dev
 
-
 deploy-dev:
   tags:
     - dev
