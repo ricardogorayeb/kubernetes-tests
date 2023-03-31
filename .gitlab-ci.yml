@@ -12,5 +12,5 @@ deploy:
     - kubectl apply -f manifests/configmap.yaml
     - kubectl apply -f manifests/ingress.yaml
   only:
-    dev
+    - dev
     
