@@ -1,4 +1,6 @@
 deploy:
+  tags:
+    - dev
   image:
     name: gitlab.mn.sipam.gov.br:5050/teste/registry/kubectl:v1
     entrypoint: ['']
@@ -9,4 +11,6 @@ deploy:
     - kubectl apply --force -f manifests/nginx.yaml
     - kubectl apply -f manifests/configmap.yaml
     - kubectl apply -f manifests/ingress.yaml
+  only:
+    dev
     
